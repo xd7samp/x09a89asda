@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     threads = []
 
-    for x in range(sys.argv[4]):
+    for x in range(int(sys.argv[4])):
         t = threading.Thread(target = send_cookie, daemon = True, args = (sys.argv[1], int(sys.argv[2]),))
         threads.append(t)
         t.start()
